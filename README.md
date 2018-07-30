@@ -1,4 +1,4 @@
-# shamzicwebsite
+# Shamzic's website
 
 > A Vue.js project
 
