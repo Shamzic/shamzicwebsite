@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Ninjas from './components/Ninjas.vue'
+
+Vue.component('ninjas', Ninjas)
 
 Vue.config.productionTip = false
 
