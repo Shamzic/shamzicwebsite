@@ -1,11 +1,12 @@
 <template>
   <footer>
-    <p> {{ copyright }} {{ title }}</p>
+    <p> {{ copyright }} {{ year }} {{ title }}</p>
   </footer>
 </template>
 
 <script>
 /* eslint-disable */
+import { bus } from '../main'
 
 export default {
   props: {
@@ -15,11 +16,14 @@ export default {
   },
   data () {
     return {
-      copyright: "Copyrights 2018 S-Hamery creations"
+      copyright: "Copyrights",
+      year: null
     }
   },
   created () {
-;
+    // Get current year
+    var today = new Date()
+    this.year= today.getFullYear()
   }
 }
 </script>
@@ -28,6 +32,8 @@ export default {
 footer {
   background: #222;
   padding: 6px;
+  margin:60px auto 45px;
+  width: 90%;
 }
 p {
   color: lightblue;

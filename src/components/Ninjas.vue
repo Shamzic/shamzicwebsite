@@ -26,6 +26,7 @@ export default {
       deleteNinja: function () {
         this.ninjas.pop();
       }
+
     }
 }
 </script>
