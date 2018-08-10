@@ -1,8 +1,12 @@
 
 <template>
   <div id="strava" class="strava">
-    <router-view/>
-    <div id="odometer" class="odometer"></div>
+    <!-- <div id="odometer" class="odometer"></div> -->
+    <div>
+      <p class="km">
+      {{ summ }}
+      </p>
+    </div>
     <p>
       kilometers traveled by bike in {{ year }}
     </p>
@@ -17,7 +21,7 @@ export default {
 
   data () {
     return {
-      summ: 0,
+      summ: null,
       year: null
     }
   },
@@ -29,7 +33,7 @@ export default {
       console.log(payload)
       console.log(payload.bikes)
       var bikeArray = payload.bikes
-      var sum = 0
+      var sum = null
       bikeArray.forEach ((element, index, array) => {
         console.log(element.distance)
         sum = sum + element.distance
@@ -42,7 +46,7 @@ export default {
     })
     setTimeout(function(){
       odometer.innerHTML = vueInstance.summ;
-    }, 1000);
+    }, 2000);
 
     var today = new Date()
     this.year= today.getFullYear()
@@ -73,4 +77,12 @@ p {
 img {
   margin-left: 40%;
 }
+
+.km {
+  margin-left: 29%;
+  font-size: 60px;
+  -webkit-animation: lightSpeedIn 1s;
+  animation: lightSpeedIn 1s;
+}
+
 </style>

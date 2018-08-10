@@ -1,18 +1,17 @@
 <template>
   <body>
     <header>
-      <h1> {{ title }}</h1>
-
+      <div class="animated jackInTheBox 4s">
+        <h1> {{ title }}</h1>
+      </div>
       <div id="main">
         <nav v-bind:class="active" v-on:click.prevent>
-          <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
-          <a href="#" class="cv" v-on:click="makeActive('cv')">CV</a>
-          <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
-          <a href="#" class="blog" v-on:click="makeActive('blog')">blog</a>
-          <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+          <router-link class="home" v-on:click.native="makeActive('home')" to="/">HOME</router-link>
+          <router-link class="cv" v-on:click.native="makeActive('cv')" to="/Cv">CV</router-link>
+          <router-link class="realisations" v-on:click.native="makeActive('realisations')" to="/Realisations">Realisations</router-link>
+          <router-link class="about" v-on:click.native="makeActive('about')" to="/About">About</router-link>
         </nav>
-
-        <p>You chose <b>{{ active }}</b></p>
+        <!-- <p>You chose <b>{{ active }}</b></p> -->
       </div>
 
     </header>
@@ -22,7 +21,6 @@
 
 <script>
 /* eslint-disable */
-import { bus } from '../main'
 
 export default {
   props : {
@@ -55,8 +53,11 @@ header {
 
 h1 {
   color: #222;
+  margin-top: 10px;
   padding-left: 50px;
   font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+
 }
 
 /* Menu */
@@ -86,7 +87,7 @@ section, footer, header, aside, nav{
 
 nav{
     display:inline-block;
-    margin:60px auto 45px;
+    margin:60px auto 15px;
     background-color: #595959;
     box-shadow:0 1px 1px #ccc;
     border-radius:10px;
@@ -119,11 +120,20 @@ nav a:last-child{
 
 nav.home .home,
 nav.cv .cv,
-nav.projects .projects,
-nav.blog .blog,
+nav.realisations .realisations,
+nav.about .about,
 nav.contact .contact{
     background-color:#d64747;
     border-radius:10px;
+}
+
+nav.home .home,
+nav.cv .cv,
+nav.realisations .realisations,
+nav.about .about,
+nav.contact .contact:hover {
+  -webkit-animation: pulse 2s;
+  animation: pulse 2s;
 }
 
 p{
@@ -144,6 +154,5 @@ p b{
 .resource {
   margin: 20px 0;
 }
-
 
 </style>

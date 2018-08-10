@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <h2>Welcome</h2>
+    <img src="../assets/panda.gif" alt="">
   </div>
 </template>
 
@@ -16,18 +18,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.hello {
+display: table;
+margin: 0 auto;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+h2 {
+  font-weight: bold;
+  margin-left: 75px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+img {
+  height: 400px;
 }
 </style>
