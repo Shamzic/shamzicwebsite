@@ -37,10 +37,8 @@ export default {
 footer {
   background: #222;
   padding: 20px;
-  margin: 30px auto 30px;
+  margin: 30px auto 0px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 p {
   color: rgb(255, 255, 255);
@@ -50,7 +48,7 @@ p {
 }
 
 img {
-  height: 60px;
+  height: 50px;
 }
 
 img:hover {

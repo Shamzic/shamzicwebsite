@@ -1,11 +1,16 @@
 
 <template>
   <div id="app">
-
+    <div id="parent" class="parent">
+      <div id="enfant" class="enfant">
     <app-header v-bind:title="title"></app-header>
-    <router-view></router-view>
+
+        <router-view></router-view>
+
     <app-footer class="footer" v-bind:title="title"></app-footer>
   </div>
+</div>
+</div>
 </template>
 
 <script>
@@ -44,6 +49,21 @@ export default {
 </script>
 
 <style scoped>
-footer {
+
+.parent{
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+}
+.enfant{
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ padding-right: 15px; /* Il faut varier cette variable en fonction du navigateur utilisé (la barre de défilement n'a pas toujours la même largeur) */
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
 }
 </style>
