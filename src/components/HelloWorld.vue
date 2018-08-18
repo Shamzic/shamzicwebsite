@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h2>Welcome</h2>
-    <img src="../assets/panda.gif" alt="">
+    <img src="../assets/Photo-Presentation.jpg" alt="">
+  <br><br><br><br><br><br><br>
   </div>
 </template>
 

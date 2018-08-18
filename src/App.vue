@@ -3,10 +3,8 @@
   <div id="app">
     <div id="parent" class="parent">
       <div id="enfant" class="enfant">
-    <app-header v-bind:title="title"></app-header>
-
+        <app-header v-bind:title="title"></app-header>
         <router-view></router-view>
-
     <app-footer class="footer" v-bind:title="title"></app-footer>
   </div>
 </div>
