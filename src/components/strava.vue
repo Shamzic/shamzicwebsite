@@ -4,12 +4,9 @@
     <!-- <div id="odometer" class="odometer"></div> -->
     <div>
       <p class="km">
-      {{ summ }}
+      {{ summ }} km by bike in {{ year }}
       </p>
     </div>
-    <p>
-      kilometers traveled by bike in {{ year }}
-    </p>
     <img src="../assets/bicycle-facing-right.png" alt="">
   </div>
 </template>
@@ -44,9 +41,6 @@ export default {
       console.log(err)
     }
     })
-    setTimeout(function(){
-      odometer.innerHTML = vueInstance.summ;
-    }, 2000);
 
     var today = new Date()
     this.year= today.getFullYear()
@@ -59,30 +53,30 @@ export default {
 
 .strava {
   display: table;
-  margin: 0 auto;
+  margin-left: 0%;
+  margin-top: 50%;
+  margin-bottom: 50%;
 }
 
-.odometer {
-
-    font-size: 80px;
-    padding-left: 110px;
-    padding-top: 40px;
+@media screen and (max-width: 600px) {
+  .strava {
+    margin-top: 1%;
+  }
 }
 
-p {
-  font-family: 'Oswald', sans-serif;
-  font-size: 30px;
-  font-weight: lighter;
-}
 img {
   margin-left: 40%;
+  margin-right: 50%;
 }
 
 .km {
-  margin-left: 29%;
-  font-size: 60px;
+  font-size: 30px;
+  margin-left: 0%;
+  margin-top: 0%;
+  margin-bottom: 2%;
   -webkit-animation: lightSpeedIn 1s;
   animation: lightSpeedIn 1s;
+  text-align: center;
 }
 
 </style>

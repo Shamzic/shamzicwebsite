@@ -66,7 +66,8 @@
     <h3>Hobbies</h3>
     <ul>
       <li>Sports: Basketball, Handball, Bicycle, Running, Climbing, Badminton, Tennis</li>
-      <li>Video montages on YouTube, Piano</li>
+      <li>Play the piano by ear</li>
+      <li>Video editing on YouTube</li>
       <li>Website creation</li>
       <li>Bike messenger</li>
     </ul>
@@ -97,11 +98,12 @@ export default {
 
 .cv {
 display: table;
-margin: 0 25%;
+margin-left: 10%;
+margin-right: 5%;
+margin-top: 5%;
 position: absolute;
 height: 100%;
-width: 50%;
-padding-left: 20px;
+width: 80%;
 }
 
 div.transbox {

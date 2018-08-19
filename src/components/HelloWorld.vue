@@ -18,18 +18,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .hello {
-display: table;
-margin: 0 auto;
-}
-h2 {
-  font-weight: bold;
-  margin-left: 75px;
-  margin-bottom: 10px;
-  margin-top: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 img {
-  height: 400px;
+  width: 100%;
 }
+
 </style>
