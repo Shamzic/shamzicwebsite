@@ -97,6 +97,7 @@ export default {
 
 
 .cv {
+  font-family: 'Raleway', sans-serif;
 display: table;
 margin-left: 10%;
 margin-right: 5%;
@@ -117,8 +118,8 @@ div.transbox {
 
 
 h3 {
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
 }
 
 li {

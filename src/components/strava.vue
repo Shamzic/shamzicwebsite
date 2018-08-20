@@ -52,6 +52,7 @@ export default {
 <style scoped>
 
 .strava {
+  font-family: 'Raleway', sans-serif;
   display: table;
   margin-left: 0%;
   margin-top: 50%;

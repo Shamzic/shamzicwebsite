@@ -71,7 +71,7 @@ h1 {
 /* Menu */
 
 body{
-    font:15px/1.3 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #5e5b64;
     text-align:center;
 }
@@ -89,8 +89,6 @@ a:hover{
 section, footer, header, aside, nav{
     display: block;
 }
-
-
 
 /*-------------------------
     The menu
